@@ -5,9 +5,9 @@ import { assets } from "../../assets/assets/frontend_assets/assets";
 function Navbar() {
   const [menu, setmenu] = useState("");
   return (
-    <div className="flex p-[20px] justify-between items-center">
-      <img src={assets.logo} alt="" />
-      <ul className="flex gap-[20px] text-[18px] text-customcolor mr-7 cursor-pointer">
+    <div className="flex p-[20px] justify-between sm:justify-between items-center">
+      <img src={assets.logo} alt="" className="w-[100px] sm:w-[150px]" />
+      <ul className="hidden sm:flex sm:gap-[20px] sm:text-[18px] sm:text-customcolor sm:mr-7 sm:cursor-pointer">
         <li
           onClick={() => setmenu("Home")}
           className={
@@ -41,13 +41,17 @@ function Navbar() {
           Contact US
         </li>
       </ul>
-      <div className="flex items-center gap-[40px]">
-        <img src={assets.search_icon} alt="" />
+      <div className="gap-[20px] flex items-center sm:gap-[40px]">
+        <img src={assets.search_icon} alt="" className="w-[20px] sm:w-[30px]" />
         <div className="relative">
-          <img src={assets.basket_icon} alt="" />
+          <img
+            src={assets.basket_icon}
+            alt=""
+            className="w-[20px] sm:w-[30px]"
+          />
           <div className="absolute min-w-[10px] min-h-[10px] bg-[tomato] rounded-[5px] top-[-8px] right-[-8px]"></div>
         </div>
-        <button className="bg-transparent text-[16px] transition duration-350  text-customcolor rounded-[50px] py-[10px] px-[30px] cursor-pointer  border-[1px] border-solid border-[tomato] hover:bg-[#fff4f2]">
+        <button className="py-[7px] px-[15px] text-[10px] bg-transparent sm:text-[16px] transition duration-350  text-customcolor rounded-[50px] sm:py-[10px] sm:px-[30px] cursor-pointer  border-[1px] border-solid border-[tomato] hover:bg-[#fff4f2]">
           SIGN-IN
         </button>
       </div>
