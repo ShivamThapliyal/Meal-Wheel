@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { assets } from "../../assets/assets/frontend_assets/assets";
+import { Context } from "../../context/Context";
 
 function Navbar({ setshow }) {
   const [menu, setmenu] = useState("");
+  const { count } = useContext(Context);
   return (
     <div className="flex p-[20px] justify-between sm:justify-between items-center">
       <img src={assets.logo} alt="" className="w-[100px] sm:w-[150px]" />
@@ -44,12 +47,16 @@ function Navbar({ setshow }) {
       <div className="gap-[20px] flex items-center sm:gap-[40px]">
         <img src={assets.search_icon} alt="" className="w-[20px] sm:w-[30px]" />
         <div className="relative">
-          <img
-            src={assets.basket_icon}
-            alt=""
-            className="w-[20px] sm:w-[30px]"
-          />
-          <div className="absolute min-w-[10px] min-h-[10px] bg-[tomato] rounded-[5px] top-[-8px] right-[-8px]"></div>
+          <NavLink to={"/cart"}>
+            <img
+              src={assets.basket_icon}
+              alt=""
+              className="w-[20px] sm:w-[30px]"
+            />
+          </NavLink>
+          <div className="absolute flex justify-center items-center min-w-[20px] min-h-[20px] bg-[tomato] rounded-[10px] top-[-12px] right-[-12px]">
+            <p className="text-[12px] font-[700] px-[3px]">{count}</p>
+          </div>
         </div>
         <button
           onClick={() => setshow(true)}
