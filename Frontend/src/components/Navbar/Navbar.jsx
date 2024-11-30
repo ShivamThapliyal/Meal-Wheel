@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { assets } from "../../assets/assets/frontend_assets/assets";
 
-function Navbar() {
+function Navbar({ setshow }) {
   const [menu, setmenu] = useState("");
   return (
     <div className="flex p-[20px] justify-between sm:justify-between items-center">
@@ -51,7 +51,10 @@ function Navbar() {
           />
           <div className="absolute min-w-[10px] min-h-[10px] bg-[tomato] rounded-[5px] top-[-8px] right-[-8px]"></div>
         </div>
-        <button className="py-[7px] px-[15px] text-[10px] bg-transparent sm:text-[16px] transition duration-350  text-customcolor rounded-[50px] sm:py-[10px] sm:px-[30px] cursor-pointer  border-[1px] border-solid border-[tomato] hover:bg-[#fff4f2]">
+        <button
+          onClick={() => setshow(true)}
+          className="py-[7px] px-[15px] text-[10px] bg-transparent sm:text-[16px] transition duration-350  text-customcolor rounded-[50px] sm:py-[10px] sm:px-[30px] cursor-pointer  border-[1px] border-solid border-[tomato] hover:bg-[#fff4f2]"
+        >
           SIGN-IN
         </button>
       </div>
