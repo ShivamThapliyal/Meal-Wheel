@@ -1,12 +1,7 @@
-# Ignore .env files
-.env
-
-# Ignore log files
-*.log
-
-# Ignore node_modules (for Node.js projects)
+# Ignore node_modules directory
 node_modules/
 
-# Ignore OS-specific files
-.DS_Store
-Thumbs.db
+# Ignore .env files
+.env
+.env.local
+.env.*.local
