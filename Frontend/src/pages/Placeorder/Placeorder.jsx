@@ -12,33 +12,39 @@ function Placeorder() {
             type="text"
             placeholder="First name"
             className="p-[13px] rounded-[5px] border-2 "
+            required
           />
           <input
             type="text"
             placeholder="Last name"
             className="p-[13px] rounded-[5px] border-2 "
+            required
           />
         </div>
         <input
           type="text"
           placeholder="Email"
           className="p-[13px] rounded-[5px] border-2 "
+          required
         />
         <input
           type="text"
           placeholder="Street"
           className="p-[13px] rounded-[5px] border-2 "
+          required
         />
         <div className="flex gap-[10px]">
           <input
             type="text"
             placeholder="city"
             className="p-[13px] rounded-[5px] border-2 "
+            required
           />
           <input
             type="text"
             placeholder="state"
             className="p-[13px] rounded-[5px] border-2 "
+            required
           />
         </div>
         <div className="flex gap-[10px]">
@@ -46,17 +52,20 @@ function Placeorder() {
             type="text"
             placeholder="Zipcode"
             className="p-[13px] rounded-[5px] border-2 "
+            required
           />
           <input
             type="text"
             placeholder="Country"
             className="p-[13px] rounded-[5px] border-2 "
+            required
           />
         </div>
         <input
           type="text"
           placeholder="phone no."
           className="p-[13px] rounded-[5px] border-2 "
+          required
         />
       </div>
       <div className="flex-1 flex-col p-[20px]  items-start gap-[15px] border-2">
