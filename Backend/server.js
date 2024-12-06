@@ -4,6 +4,7 @@ import { connectDb } from "./config/db.js";
 import foodrouter from "./routes/foodrouter.js";
 import UserRoute from "./routes/userRoute.js";
 import "dotenv/config";
+import cartRoute from "./routes/cartRoute.js";
 
 // App configuration
 const app = express();
@@ -21,6 +22,7 @@ connectDb();
 app.use("/api/food", foodrouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", UserRoute);
+app.use("/api/cart", cartRoute);
 
 app.listen(port, () => {
   console.log(`Server Started on http://localhost:${port}`);
