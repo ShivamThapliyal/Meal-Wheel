@@ -5,7 +5,7 @@ import Cart from "./pages/Cart/Cart";
 import Placeorder from "./pages/Placeorder/Placeorder";
 import Footer from "./components/footer/Footer";
 import { useState } from "react";
-import Login from "./components/login/login";
+import Login from "./components/login/Login.jsx";
 
 function App() {
   const [show, setshow] = useState(false);

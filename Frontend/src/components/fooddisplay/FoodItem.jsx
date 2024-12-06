@@ -3,13 +3,13 @@ import { assets } from "../../assets/assets/frontend_assets/assets";
 import { Context } from "../../context/Context";
 
 function FoodItem({ id, name, description, image, price }) {
-  const { carditem, addtocart, removefromcart, setcarditem } =
+  const { carditem, addtocart, removefromcart, setcarditem, url } =
     useContext(Context);
   return (
     <div className="shadow-[0px_0px_5px_black] w-[100%] m-auto rounded-[15px]">
       <div className="relative">
         <img
-          src={image}
+          src={url + "/images/" + image}
           alt=""
           className="w-[100%] rounded-[15px_15px_0px_0px]"
         />

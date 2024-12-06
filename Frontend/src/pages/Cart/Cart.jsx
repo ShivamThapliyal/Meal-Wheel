@@ -4,7 +4,8 @@ import { assets } from "../../assets/assets/frontend_assets/assets";
 import { NavLink, useNavigate } from "react-router-dom";
 
 function Cart() {
-  const { carditem, food_list, removefromcart, gettotal } = useContext(Context);
+  const { carditem, food_list, removefromcart, gettotal, url } =
+    useContext(Context);
   const navigate = useNavigate();
   return (
     <div>
@@ -27,7 +28,7 @@ function Cart() {
             return (
               <div className="grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] mt-[50px] items-center text-[max(1.2vw,12px)] text-black">
                 <img
-                  src={item.image}
+                  src={url + "/images/" + item.image}
                   alt=""
                   className="w-[50px] rounded-[10px]"
                 />

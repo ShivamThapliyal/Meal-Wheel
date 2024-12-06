@@ -1,11 +1,15 @@
+import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import { food_list } from "../assets/assets/frontend_assets/assets";
+// import { food_list } from "../assets/assets/frontend_assets/assets";
 
 export const Context = createContext();
 
 const ContextProvider = (props) => {
   const [carditem, setcarditem] = useState({});
   var count = Object.keys(carditem).length;
+  const url = "http://localhost:4000";
+  const [token, settoken] = useState("");
+  const [food_list, setfood_list] = useState([]);
 
   useEffect(() => {
     console.log("Number of items in the cart:", Object.keys(carditem).length);
@@ -30,9 +34,6 @@ const ContextProvider = (props) => {
       return updatedCart;
     });
   };
-  useEffect(() => {
-    console.log(carditem);
-  }, [carditem]);
 
   const gettotal = () => {
     let Total = 0;
@@ -44,8 +45,24 @@ const ContextProvider = (props) => {
     }
     return Total;
   };
+  const fetchfood = async () => {
+    const response = await axios.get(url + "/api/food/listfood");
+    setfood_list(response.data.data);
+  };
+  useEffect(() => {
+    async function loadData() {
+      await fetchfood();
+      if (localStorage.getItem("token")) {
+        settoken(localStorage.getItem("token"));
+      }
+    }
+    loadData();
+  }, []);
 
   const contextvalue = {
+    token,
+    settoken,
+    url,
     gettotal,
     count,
     food_list,

@@ -5,6 +5,7 @@ import FoodItem from "./FoodItem";
 
 function FoodDisplay({ category }) {
   const { food_list } = useContext(Context);
+
   return (
     <div className="mt-[30px]">
       <h1 className="text-[max(2vw,24px)] font-[500]">Top Dishes</h1>
