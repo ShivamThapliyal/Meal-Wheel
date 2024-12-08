@@ -5,6 +5,7 @@ import { Context } from "../../context/Context";
 function FoodItem({ id, name, description, image, price }) {
   const { carditem, addtocart, removefromcart, setcarditem, url } =
     useContext(Context);
+  console.log(id);
   return (
     <div className="shadow-[0px_0px_5px_black] w-[100%] m-auto rounded-[15px]">
       <div className="relative">

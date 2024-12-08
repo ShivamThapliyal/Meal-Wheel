@@ -78,7 +78,10 @@ function Navbar({ setshow }) {
             <img src={assets.profile_icon} alt="" />
             <div className="absolute z-10 hidden right-1 top-7 group-hover:block">
               <ul className="flex flex-col gap-[10px] bg-[#fff2ef] py-[12px] px-[30px] rounded-[5px] border-[2px] border-solid border-[tomato] ">
-                <li className="flex items-center justify-center  gap-[10px] cursor-pointer hover:text-[tomato]">
+                <li
+                  onClick={() => navigate("/myorders")}
+                  className="flex items-center justify-center  gap-[10px] cursor-pointer hover:text-[tomato]"
+                >
                   <img src={assets.bag_icon} alt="" className="w-[20px]" />
                   <p className="text-[20px]">Orders</p>
                 </li>
