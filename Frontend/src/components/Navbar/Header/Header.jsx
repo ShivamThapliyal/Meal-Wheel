@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="bg-[url('C:\Users\shiva\OneDrive\Desktop\Fast-Food\Frontend\public\header_img.png')] h-[38vw] sm:h-[34vw] bg-no-repeat bg-contain relative  my-[30px] mx-[auto]">
+    <div className="bg-[url("header_img.png')] h-[38vw] sm:h-[34vw] bg-no-repeat bg-contain relative  my-[30px] mx-[auto]">
       <div className="absolute bottom-[15%] sm:bottom-[10%] left-[30px] sm:left-[60px] flex flex-col items-start gap-[1vw] sm:gap-[1.5vw] max-w-[62%] sm:max-w-[50%]">
         <h2 className="  sm:text-[max(4.3vw,20px)] font-[500] animate-fadeIn text-white">
           Order your <br /> favourite food here.
