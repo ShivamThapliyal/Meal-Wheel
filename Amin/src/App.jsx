@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./component/Navbar/Navbar";
-import Sidebar from "./component/sidebar/sidebar";
+import Sidebar from "./component/sidebar/Sidebar";
 import Add from "./pages/Add";
 import List from "./pages/List";
 import Order from "./pages/order/Order";
