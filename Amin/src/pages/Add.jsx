@@ -27,7 +27,7 @@ function Add() {
     formdata.append("category", data.category);
     formdata.append("image", image);
     const response = await axios.post(
-      "http://localhost:4000/api/food/add",
+      "https://meal-wheel-backend.onrender.com",
       formdata
     );
     if (response.data.success) {
