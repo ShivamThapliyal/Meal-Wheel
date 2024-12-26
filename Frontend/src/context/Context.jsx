@@ -7,7 +7,7 @@ export const Context = createContext();
 const ContextProvider = (props) => {
   const [carditem, setcarditem] = useState({});
   var count = Object.keys(carditem).length;
-  const url = "http://localhost:4000";
+  const url = "https://meal-wheel-backend.onrender.com";
   const [token, settoken] = useState("");
   const [food_list, setfood_list] = useState([]);
 
