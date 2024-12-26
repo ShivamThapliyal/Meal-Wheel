@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 function List() {
-  const url = "http://localhost:4000";
+  const url = "https://meal-wheel-backend.onrender.com";
   const [list, setlist] = useState([]);
 
   const fetch = async () => {
