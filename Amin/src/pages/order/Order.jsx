@@ -7,7 +7,7 @@ import "./order.css";
 import { assets } from "../../assets/admin_assets/assets";
 
 function Order() {
-  const url = "http://localhost:4000";
+  const url = "https://meal-wheel-backend.onrender.com";
   const [orders, setorders] = useState([]);
   const fetchallorders = async () => {
     const response = await axios.get(url + "/api/order/list");
